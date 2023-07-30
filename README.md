@@ -34,7 +34,7 @@ git clone https://github.com/temik4/easun-inverter-monitoring.git
 docker-compose up -d
 ```
 
-for trublshuting you can run app in console and get metrics on port 8000 (http://ip:8000/metrics)
+for troubleshooting you can run the app in the console and get metrics on port 8000 (```http://yourServerIP:8000/metrics```)
 
 ```
 make deps
@@ -47,5 +47,5 @@ python -m easun_monitoring.app
 ## Usage <a name = "usage"></a>
 
 After running the application, you should make sure that all the required docker containers (prometheus, grafana and easun_monitoring) are running.</br>
-If everything went well, you will be able to access the Grafana dashboard at the link: http://yourServerIP:3000/d/l2a2zy04k/power-monitoring?orgId=1
-You can find the credentials in the [config.monitoring file](grafana/config.monitoring)
+If everything went well, you will be able to access the Grafana dashboard at the link:</br> ```http://yourServerIP:3000/d/l2a2zy04k/power-monitoring?orgId=1```</br>
+You can find the Grafana credentials in the [config.monitoring file](grafana/config.monitoring)

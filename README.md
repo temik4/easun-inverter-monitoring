@@ -4,6 +4,7 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Troubleshooting](#troubleshooting)
 - [Usage](#usage)
 
 ## About <a name = "about"></a>
@@ -14,6 +15,7 @@ I'm not sure how true this is, but the [documentation for the inverter communica
 ## Getting Started <a name = "getting_started"></a>
 
 These instructions will help you copy and run a copy of the project on your local computer for development, testing, or use purposes.
+
 
 ### Prerequisites
 
@@ -34,7 +36,20 @@ git clone https://github.com/temik4/easun-inverter-monitoring.git
 docker-compose up -d
 ```
 
-for troubleshooting you can run the app in the console and get metrics on port 8000 (```http://yourServerIP:8000/metrics```)
+### Troubleshooting <a name = "troubleshooting"></a>
+
+In my particular case, the USB-RS232 adapter was used, which was defined as ```/dev/ttyUSB0``` in the system.</br>
+If your case is different, then you should make the necessary changes in the [app.py](easun_monitoring/app.py) file in this part of the code:
+
+```
+def get_inverter() -> Inverter:
+    global _inverter
+    if _inverter is None:
+        _inverter = Inverter('/dev/ttyUSB0')
+    return _inverter
+```
+
+For troubleshooting and development purposes, you can run the application in the console and get the metrics on port 8000 (```http://yourServerIP:8000/metrics```) without having to run docker containers: 
 
 ```
 make deps

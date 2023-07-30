@@ -13,6 +13,7 @@ services:
 
   prometheus:
     image: prom/prometheus:latest
+    user: "${UID}:${GID}"
     volumes:
       - ./prometheus:/etc/prometheus
       - ./prometheus/data:/prometheus
@@ -28,7 +29,7 @@ services:
 
   grafana:
     image: grafana/grafana
-    user: '472'
+    user: "${UID}:${GID}"
     restart: always
     environment:
       GF_INSTALL_PLUGINS: 'grafana-clock-panel,grafana-simple-json-datasource'

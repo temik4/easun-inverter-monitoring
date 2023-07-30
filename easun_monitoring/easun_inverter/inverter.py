@@ -68,7 +68,7 @@ class QPIGS(BasicCommand):
         r'(?P<battery_charging_current>\d{3}) '  # A
         r'(?P<battery_percent>\d{3}) '  # %
         r'(?P<heat_sink_temperature>\d{4}) '  # C
-        r'(?P<pv_current>\d{2}\.\d{1}) '  # A
+        r'(?P<pv_current>\d{4}) '  # A
         r'(?P<pv_voltage>\d{3}\.\d{1}) '  # C
         r'(?P<scc_voltage>\d{2}\.\d{2}) '  # V
         r'(?P<battery_discharge_current>\d{5}) '  # A

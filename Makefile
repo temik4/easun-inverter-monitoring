@@ -18,7 +18,7 @@ ${ENV}:
 ${SITE_PACKAGES}/aiohttp: ${ENV}
 	@${IN_ENV} ${PYTHON} -m pip install -r requirements.txt
 
-${SITE_PACKAGES}/anern_monitoring: ${ENV} install
+${SITE_PACKAGES}/easun_monitoring: ${ENV} install
 
 deps: ${SITE_PACKAGES}/aiohttp
 
@@ -41,5 +41,5 @@ clean: build_clean dist_clean
 	@rm -rf ${ENV} dist build __pycache__ *.egg-info
 
 docker: build_clean dist_clean wheel
-	@docker build -t anern_monitoring:${PACKAGE_VERSION} .
-	@docker tag anern_monitoring:${PACKAGE_VERSION} anern_monitoring:latest
+	@docker build -t easun_monitoring:${PACKAGE_VERSION} .
+	@docker tag easun_monitoring:${PACKAGE_VERSION} easun_monitoring:latest

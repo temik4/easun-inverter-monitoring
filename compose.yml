@@ -1,13 +1,13 @@
 version: '3.2'
 
 services:
-  anern_monitoring:
+  easun_monitoring:
     build: .
     privileged: true
     volumes:
       - ./:/app
       - /dev:/dev
-    command: gunicorn anern_monitoring.app:monitoring_app -b :8081 --worker-class aiohttp.GunicornWebWorker --reload --access-logfile -
+    command: gunicorn easun_monitoring.app:monitoring_app -b :8081 --worker-class aiohttp.GunicornWebWorker --reload --access-logfile -
     ports:
       - "8081:8081"
 
@@ -15,14 +15,14 @@ services:
     image: prom/prometheus:latest
     volumes:
       - ./prometheus:/etc/prometheus
-      - ~/prometheus_data:/prometheus
+      - ./prometheus/data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
       - '--web.console.libraries=/usr/share/prometheus/console_libraries'
       - '--web.console.templates=/usr/share/prometheus/consoles'
     links:
-      - anern_monitoring
+      - easun_monitoring
     ports:
       - 9090:9090
 
@@ -33,7 +33,7 @@ services:
     environment:
       GF_INSTALL_PLUGINS: 'grafana-clock-panel,grafana-simple-json-datasource'
     volumes:
-      - ~/grafana_data:/var/lib/grafana
+      - ./grafana/data:/var/lib/grafana
       - ./grafana/provisioning/:/etc/grafana/provisioning/
     env_file:
       - ./grafana/config.monitoring

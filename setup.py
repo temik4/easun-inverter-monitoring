@@ -13,7 +13,7 @@ install_requires = [
 ]
 
 setup(
-    name='anern_monitoring',
+    name='easun_monitoring',
     version=_get_version(),
     include_package_data=True,
     install_requires=install_requires,

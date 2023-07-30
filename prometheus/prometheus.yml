@@ -10,13 +10,13 @@ alerting:
       timeout: 10s
       api_version: v1
 scrape_configs:
-  - job_name: anern_monitoring
+  - job_name: easun_monitoring
     honor_timestamps: true
     metrics_path: /metrics
     scheme: http
     static_configs:
       - targets:
-          - 'anern_monitoring:8081'
+          - 'easun_monitoring:8081'
   - job_name: prometheus
     static_configs:
       - targets:

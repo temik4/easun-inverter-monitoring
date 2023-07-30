@@ -1,6 +1,6 @@
 from aiohttp import web
 
-from .anern_inverter.inverter import Inverter
+from .easun_inverter.inverter import Inverter
 
 _inverter = None
 

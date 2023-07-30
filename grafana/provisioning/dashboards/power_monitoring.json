@@ -116,7 +116,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "ac_output_active_power{instance=\"anern_monitoring:8081\"} / 60 / 1000",
+          "expr": "ac_output_active_power{instance=\"easun_monitoring:8081\"} / 60 / 1000",
           "legendFormat": "Power consumption (kWh)",
           "range": true,
           "refId": "A"
@@ -127,7 +127,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "pv_power{instance=\"anern_monitoring:8081\"}  / 60 / 1000",
+          "expr": "pv_power{instance=\"easun_monitoring:8081\"}  / 60 / 1000",
           "hide": false,
           "legendFormat": "Power generation (PV)",
           "range": true,
@@ -140,7 +140,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "ac_output_active_power{instance=\"anern_monitoring:8081\"} / 60 / 1000 - pv_power{instance=\"anern_monitoring:8081\"}  / 60 / 1000",
+          "expr": "ac_output_active_power{instance=\"easun_monitoring:8081\"} / 60 / 1000 - pv_power{instance=\"easun_monitoring:8081\"}  / 60 / 1000",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -241,7 +241,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "ac_output_active_power{instance=\"anern_monitoring:8081\"}",
+          "expr": "ac_output_active_power{instance=\"easun_monitoring:8081\"}",
           "legendFormat": "Power load",
           "range": true,
           "refId": "A"
@@ -252,7 +252,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "pv_power{instance=\"anern_monitoring:8081\"}",
+          "expr": "pv_power{instance=\"easun_monitoring:8081\"}",
           "hide": false,
           "legendFormat": "PV Power generation",
           "range": true,
@@ -350,7 +350,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "battery_percent{instance=\"anern_monitoring:8081\"}",
+          "expr": "battery_percent{instance=\"easun_monitoring:8081\"}",
           "legendFormat": "Battery capacity",
           "range": true,
           "refId": "A"
@@ -447,7 +447,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "grid_voltage{instance=\"anern_monitoring:8081\"}",
+          "expr": "grid_voltage{instance=\"easun_monitoring:8081\"}",
           "legendFormat": "Grid voltage",
           "range": true,
           "refId": "A"

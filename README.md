@@ -7,7 +7,7 @@
 - [Usage](#usage)
 
 ## About <a name = "about"></a>
-Simple monitoring for EaSunPower hybrid solar 2.4kW inverter over RS232
+Simple monitoring for [EaSunPower hybrid solar 2.4kW](https://www.easunpower.com/products/easun-power-pwm-3kva-2400w-24v-solar-inverter-off-grid-hybrid-220v-80a-charging-current) inverter over RS232
 
 I'm not sure how true this is, but the [documentation for the inverter communication protocol](HS_MS_MSX_RS232_Protocol_20140822_after_current_upgrade.pdf) that I found on the net is very similar to what works.
 

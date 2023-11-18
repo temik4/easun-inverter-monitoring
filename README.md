@@ -33,6 +33,7 @@ A step-by-step series of commands that will allow you to run the application:
 
 ```
 git clone https://github.com/temik4/easun-inverter-monitoring.git
+cd easun-inverter-monitoring
 docker-compose up -d
 ```
 

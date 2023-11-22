@@ -53,8 +53,6 @@ def get_inverter() -> Inverter:
 For troubleshooting and development purposes, you can run the application in the console and get the metrics on port 8000 (```http://yourServerIP:8000/metrics```) without having to run docker containers: 
 
 ```
-python -m venv .env
-source .env/bin/activate
 make deps
 make ENV=.env
 source .env/bin/activate

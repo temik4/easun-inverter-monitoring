@@ -59,6 +59,10 @@ source .env/bin/activate
 python -m easun_monitoring.app
 ```
 
+For use with a USB/COM adapter and a virtual machine, you may need to install additional kernel modules. Use this command (tested for Ubuntu 22.04):
+
+```apt install linux-modules-extra-$(uname -r)```
+
 
 ## Usage <a name = "usage"></a>
 
